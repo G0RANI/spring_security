@@ -1,15 +1,15 @@
-spring_security
-================
+# spring_security
 
-Version
--------------
+
+
+### Version
 
 springframework-version : 4.3.2
 
 security-version : 4.1.3
 
-SpEL 문법
--------------
+### SpEL 문법
+
 * hasRole('role1')
 	* 권한(role1)을 가지고 있는 경우
 * hasAnyRole('role1', 'role2')
@@ -27,9 +27,7 @@ SpEL 문법
 * isFullyAuthenticated()
 	* Anonymous 사용자가 아니고 Remember-me 기능으로 로그인 하지 않은 사용자 일 경우
 
-
-form-login 설정
--------------
+### form-login 설정
 * username-parameter
 	* input 태그의 아이디 혹은 이메일 name 속성 값 (default: username)
 * password-parameter
