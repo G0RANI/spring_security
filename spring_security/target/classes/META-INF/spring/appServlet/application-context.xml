@@ -17,8 +17,17 @@
 	<context:component-scan base-package="com.security.web" />
 	
 	<!-- spring-security -->
-	<security:http auto-config="true" use-expressions="false">
-            <security:intercept-url pattern="/**" access="ROLE_USER" />
+	<security:http auto-config="true" use-expressions="true">
+			<security:intercept-url pattern="/main/**" access="hasAnyRole('ROLE_USER')" />
+            <security:intercept-url pattern="/**" access="permitAll" />
+            
+            <security:form-login
+	        username-parameter="loginId"
+	        password-parameter="loginPwd"
+	        login-page="/"
+	        login-processing-url="/login"
+	        default-target-url="/main"
+	   		 />
     </security:http>
     
     <security:authentication-manager>
