@@ -4,8 +4,8 @@ springframework-version : 4.3.2
 
 security-version : 4.1.3
 
-*pEL 문법
-  -Role('role1')
++pEL 문법
++Role('role1')
     -권한(role1)을 가지고 있는 경우
   -hasAnyRole('role1', 'role2')
     -권한들(role1, role2) 하나라도 가지고 있을 경우 (갯수는 제한없다)
@@ -22,7 +22,7 @@ security-version : 4.1.3
   -isFullyAuthenticated()
     -Anonymous 사용자가 아니고 Remember-me 기능으로 로그인 하지 않은 사용자 일 경우
     
- -form-login 설정
+ form-login 설정
 	-username-parameter
 		-input 태그의 아이디 혹은 이메일 name 속성 값 (default: username)
 	-password-parameter
