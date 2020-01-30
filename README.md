@@ -53,14 +53,22 @@
 
 
 ### 쿼리
-> CREATE TABLE `user` (
-  `ID` varchar(100) NOT NULL,
-  `PASSWORD` varchar(300) NOT NULL,
-  `NAME` varchar(45) NOT NULL,
-  `AUTHORITY` varchar(50) NOT NULL DEFAULT 'ROLE_USER',
-  `ENABLED` tinyint(1) unsigned zerofill DEFAULT '1',
-  PRIMARY KEY (`ID`)
+CREATE TABLE 'user' (
+
+'ID' varchar(100) NOT NULL,
+  
+'PASSWORD' varchar(300) NOT NULL,
+  
+'NAME' varchar(45) NOT NULL,
+  
+'AUTHORITY' varchar(50) NOT NULL DEFAULT 'ROLE_USER',
+  
+'ENABLED' tinyint(1) unsigned zerofill DEFAULT '1',
+  
+PRIMARY KEY (`ID`)
+
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8
 
->insert user
+insert user
+
 values ('user', 'userPw', '테스트', 'ROLE_USER', '1');
