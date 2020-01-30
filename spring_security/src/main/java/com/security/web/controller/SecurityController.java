@@ -1,22 +1,22 @@
 package com.security.web.controller;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class SecurityController {
 	
-	@RequestMapping(value = "/")
+	@GetMapping("/")
 	public String home() throws Exception {	
 		return "loginPage";
 	}
 	
-	@RequestMapping(value = "/main")
+	@GetMapping("/main")
     public String loginPage() throws Exception {
         return "index";
     }
 	
-	@RequestMapping(value = "/access_denied_page")
+	@GetMapping("/access_denied_page")
 	public String accessDeniedPage() {
 		return "accessDeniedPage";
 	}

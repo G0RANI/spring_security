@@ -57,15 +57,18 @@
             <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" onclick="document.getElementById('logout-form').submit();" style="cursor:pointer">Logout</a>
-            <form id="logout-form" action="logout" method="POST">
-            	<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
-            </form>
-          </li>
-          <li class="nav-item">
             <a class="nav-link js-scroll-trigger">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
             	Wellcome, <%=name %>
             </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" onclick="document.getElementById('logout-form').submit();" style="cursor:pointer">
+            	&nbsp; &nbsp; &nbsp;
+            	Logout
+            </a>
+            <form id="logout-form" action="logout" method="POST">
+            	<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+            </form>
           </li>
         </ul>
       </div>
