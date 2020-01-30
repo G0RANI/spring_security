@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<!DOCTYPE html>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>  
 <html>
 <head>
 <meta charset="UTF-8">
@@ -30,6 +31,12 @@
                      <input type="password" class="form-control" name="loginPwd" placeholder="Password">
                   </div>
                   <input name="${_csrf.parameterName}" type="hidden" value="${_csrf.token}"/>
+                  <c:if test="${not empty SPRING_SECURITY_LAST_EXCEPTION}">
+    				<font color="red">
+                  		<p>아이디 혹은 비밀번호를 확인해주세요</p>
+                  	<c:remove var="SPRING_SECURITY_LAST_EXCEPTION" scope="session"/>
+    				</font>
+				  </c:if>
                   <button type="submit" class="btn btn-black">Login</button>
                </form>
             </div>

@@ -16,4 +16,9 @@ public class SecurityController {
         return "index";
     }
 	
+	@RequestMapping(value = "/access_denied_page")
+	public String accessDeniedPage() {
+		return "accessDeniedPage";
+	}
+	
 }

@@ -28,6 +28,16 @@
 	        login-processing-url="/login"
 	        default-target-url="/main"
 	   		 />
+	   		 
+	   		 <security:logout
+	   		 logout-url="/**/logout"
+	   		 invalidate-session="true"
+	   		 logout-success-url="/"
+	   		 />
+	   		 
+	   		<security:access-denied-handler
+    		error-page="/access_denied_page"
+			/>
     </security:http>
     
     <security:authentication-manager>
