@@ -50,3 +50,17 @@
 	* 로그인 실패시 authentication-failure-url이 아닌 핸들러로 리다이렉트
 * always-use-default-target
 	* 무조건 핸들러가 지정한 페이지로 이동 (default: false)
+
+
+### 쿼리
+> CREATE TABLE `user` (
+  `ID` varchar(100) NOT NULL,
+  `PASSWORD` varchar(300) NOT NULL,
+  `NAME` varchar(45) NOT NULL,
+  `AUTHORITY` varchar(50) NOT NULL DEFAULT 'ROLE_USER',
+  `ENABLED` tinyint(1) unsigned zerofill DEFAULT '1',
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8
+
+>insert user
+values ('user', 'userPw', '테스트', 'ROLE_USER', '1');
