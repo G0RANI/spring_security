@@ -2,11 +2,15 @@
 
 
 
-### Version
+### Information
 
 * springframework-version : 4.3.2
 
 * security-version : 4.1.3
+
+* MariaDB
+
+* MyBatis
 
 ### SpEL 문법
 
