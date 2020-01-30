@@ -62,5 +62,5 @@ CREATE TABLE 'user' (
 PRIMARY KEY ('ID')
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8
 
-insert user
-values ('user', 'userPw', '테스트', 'ROLE_USER', '1');
+INSERT user
+VALUES ('user', 'userPw', '테스트', 'ROLE_USER', '1');
