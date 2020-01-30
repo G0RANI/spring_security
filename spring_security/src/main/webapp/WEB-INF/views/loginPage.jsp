@@ -9,7 +9,7 @@
 <link href="<%=application.getContextPath()%>/resources/css/login.css" rel="stylesheet" id="text/css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-<title>Insert title here</title>
+<title>security</title>
 </head>
 <body>
 <div class="sidenav">

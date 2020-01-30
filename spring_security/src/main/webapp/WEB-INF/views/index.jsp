@@ -20,7 +20,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="description" content="">
 <meta name="author" content="">
-<title>Insert title here</title>
+<title>security</title>
 <!-- Font Awesome Icons -->
 <link href="<%=application.getContextPath()%>/resources/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
 
