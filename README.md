@@ -78,6 +78,8 @@ PRIMARY KEY ('ID')
 INSERT user
 VALUES ('user', '$2a$10$eSUXEwLVb7yIIgVeVAEkNezqiIKHGPfQjqyIdOKL9m4UC1YyvOBC6', '테스트', 'ROLE_USER', '1');
 
+BCrypt encoding : test -> $2a$10$eSUXEwLVb7yIIgVeVAEkNezqiIKHGPfQjqyIdOKL9m4UC1YyvOBC6
+
 ### 참고
 https://to-dy.tistory.com/70?category=720806
 
