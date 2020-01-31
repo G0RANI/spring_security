@@ -6,8 +6,10 @@ import java.util.Collection;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.stereotype.Component;
 
 @SuppressWarnings("serial")
+@Component
 public class SecurityDTO implements UserDetails{
 	
     private String ID;

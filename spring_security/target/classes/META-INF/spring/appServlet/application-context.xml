@@ -26,7 +26,7 @@
 	        password-parameter="loginPwd"
 	        login-page="/"
 	        login-processing-url="/login"
-	        default-target-url="/main"
+	        authentication-success-handler-ref="loginSuccessHandler"
 	   		 />
 	   		 
 	   		 <security:logout
@@ -41,11 +41,25 @@
     </security:http>
     
 	<security:authentication-manager>
-	    <security:authentication-provider user-service-ref="userService">
-	    </security:authentication-provider>
+	    <security:authentication-provider ref="userAuthProvider"/>
+	    	<security:authentication-provider user-service-ref="userService">
+			    <security:password-encoder ref="passwordEncoder"/> 
+    	</security:authentication-provider>
 	</security:authentication-manager>
+	
+	<beans:bean id="loginSuccessHandler" class="com.security.web.comm.LoginSuccessHandler">
+		<beans:property name="loginidname" value="loginId"/>
+		<beans:property name="defaultUrl" value="/main"/>
+	</beans:bean>
+
         
 	<beans:bean id="userService" class="com.security.web.service.SecurityServiceImpl"/>
+	<beans:bean id="userAuthProvider" class="com.security.web.comm.CustomAuthenticationProvider"/>
+	<beans:bean id="passwordEncoder" class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder"/>
+	<!-- SHA256 -->
+	<!-- <beans:bean id="passwordEncoder" class="org.springframework.security.authentication.encoding.ShaPasswordEncoder">
+		<beans:constructor-arg name="strength" value="256"/>
+	</beans:bean> -->
 
 	
 	<!-- Enables the Spring MVC @Controller programming model -->
