@@ -12,6 +12,8 @@
 
 * MyBatis
 
+* BCrypt
+
 ### SpEL 문법
 
 * hasRole('role1')
@@ -74,4 +76,9 @@ PRIMARY KEY ('ID')
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8
 
 INSERT user
-VALUES ('user', 'userPw', '테스트', 'ROLE_USER', '1');
+VALUES ('user', '$2a$10$eSUXEwLVb7yIIgVeVAEkNezqiIKHGPfQjqyIdOKL9m4UC1YyvOBC6', '테스트', 'ROLE_USER', '1');
+
+### 참고
+https://to-dy.tistory.com/70?category=720806
+
+https://songc92.tistory.com/46
