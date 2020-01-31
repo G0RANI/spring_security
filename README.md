@@ -50,7 +50,18 @@
 	* 로그인 실패시 authentication-failure-url이 아닌 핸들러로 리다이렉트
 * always-use-default-target
 	* 무조건 핸들러가 지정한 페이지로 이동 (default: false)
-
+	
+### logout 설정
+* logout-url
+	* 로그아웃 처리에 대한 URL. form태그의 action 속성에 지정한 값. (default: POST /logout)
+* logout-success-url
+	* 로그아웃 성공시, 이동할 URL. (default: /login?logout)
+* invalidate-session
+	* 로그아웃 시, session을 무효화할 지 선택. (default: true)
+* delete-cookies
+	* 로그아웃 성공시, 삭제할 쿠키 이름 지정
+* success-handler-ref
+	* 로그아웃 성공시, logout-success-url 이 아닌 핸들러로 리다이렉트
 
 ### 쿼리
 CREATE TABLE 'user' (
