@@ -1,3 +1,5 @@
-* linguist-vendored
+jest.config.js linguist-vendored
+yarn-*.js linguist-vendored
 
-*.css linguist-vendored=false
+jest.config.css linguist-vendored
+yarn-*.css linguist-vendored
